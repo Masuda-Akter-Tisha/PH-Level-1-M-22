@@ -17,12 +17,44 @@
         <h1>This is a header no banner</h1>
     </header>
     <main>
-        <h2>Welcom to my DOM</h2>
+        <h1>Welcom to my DOM</h1>
         <ul>
             <li>Shafaiyat</li>
             <li>Bonobash</li>
             <li>Jalali</li>
+            <li>dom de re baba</li>
         </ul>
     </main>
+    <script>
+        // console.log('hello javascript');
+        // console.log('hello bole chole gelo');
+        const student = {
+            name: 'sariba',
+            age:23,
+            study: function (subject) {
+                console.log('studying subject:',subject);
+                
+            }
+        }
+
+        // document.getElementsByTagName
+
+        const liCollections = document.getElementsByTagName('li');
+        console.log(liCollections);
+
+        for (const liCollection of liCollections) {
+            console.log(liCollection.innerText);
+        }
+
+        //h1 tags
+        const allHeadings = document.getElementsByTagName('h1');
+        console.log(allHeadings);
+
+        for (const heading of allHeadings) {
+            console.log(heading.innerText);
+        }
+
+    </script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
