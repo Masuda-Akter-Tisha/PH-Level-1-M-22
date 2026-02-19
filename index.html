@@ -9,6 +9,12 @@
             color: violet;
             font-size: 30px;
         }
+        #food-title {
+            color: green;
+        }
+        .food .bangla-khabar {
+            font-size: 50px;
+        }
     </style>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -17,13 +23,34 @@
         <h1>This is a header no banner</h1>
     </header>
     <main>
-        <h1>Welcom to my DOM</h1>
+     <section id="poran-dhaka" class="enjoy">
+           <h1>Welcom to my DOM</h1>
+           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque a <span>blanditiis aliquam ab,</span>itaque sint tempore accusantium nostrum, iure, quaerat enim suscipit consequatur <span>culpa aspernatur?</span> Aliquid pariatur mollitia voluptate voluptatum?</p>
+           <h1>skjfhfdjfldkfnkjhf <span>jdfknkfjbkggg</span></h1>
         <ul>
             <li>Shafaiyat</li>
             <li>Bonobash</li>
             <li>Jalali</li>
-            <li>dom de re baba</li>
+            <li class="bangla-khabar">dom de re baba</li>
         </ul>
+        <div>
+            <h2>welcome to dom traversing</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, cupiditate!</p>
+        </div>
+     </section>
+
+     <section class="food">
+        <h1 id="food-title">Food-Love</h1>
+        <ul>
+            <li>potato</li>
+            <li>lentils</li>
+            <li id="vorta">vorta</li>
+            <li>rice</li>
+            <li class="bangla-khabar">chingri</li>
+            <li class="bangla-khabar">pumkin</li>
+            <li class="bangla-khabar">pantha-vath</li>
+        </ul>
+     </section>
     </main>
     <script>
         // console.log('hello javascript');
@@ -54,6 +81,53 @@
             console.log(heading.innerText);
         }
 
+        //div tag
+        const allDivs = document.getElementsByTagName('div');
+        console.log(allDivs);
+
+        for (const allDiv of allDivs) {
+            console.log(allDiv.innerText);
+        }
+        //get element by id
+        const foodTitleH1 = document.getElementById('food-title');
+        console.log(foodTitleH1.innerText);
+        foodTitleH1.innerText = 'I Love many types of food';
+
+        //.......
+
+        const liVorta = document.getElementById('vorta');
+        console.log(liVorta.innerText);
+
+        vorta.innerText = 'vorta-vajhi'
+
+        //.......
+
+        const classElementLi = document.getElementsByClassName('bangla-khabar');
+        console.log(classElementLi);
+        for (const element of classElementLi) {
+            console.log(element.innerText);
+        }
+
+        // query selector all
+
+        const foodSection = document.querySelectorAll('.food .bangla-khabar');
+        console.log(foodSection);
+        for (const food of foodSection) {
+            console.log(food.innerText);
+        }
+        // ......
+        const poranDhakaSection = document.querySelectorAll('#poran-dhaka p span');
+        console.log(poranDhakaSection);
+        for (const dhaka of poranDhakaSection) {
+            console.log(dhaka.innerText);
+        }
+        // ....
+        const oldDhakaSection = document.querySelectorAll('#poran-dhaka span');
+        console.log(oldDhakaSection);
+
+        // query selector
+        const dhaka = document.querySelector('#poran-dhaka span');
+        console.log(dhaka.innerText);
     </script>
     <script src="./js/script.js"></script>
 </body>
